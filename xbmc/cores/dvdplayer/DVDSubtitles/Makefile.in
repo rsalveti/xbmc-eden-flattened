@@ -1,0 +1,20 @@
+INCLUDES+=-I@abs_top_srcdir@/xbmc/cores/dvdplayer
+
+SRCS=	DVDFactorySubtitle.cpp \
+	DVDSubtitleLineCollection.cpp \
+	DVDSubtitleParserMicroDVD.cpp \
+	DVDSubtitleParserMPL2.cpp \
+	DVDSubtitleParserSami.cpp \
+	DVDSubtitleParserSSA.cpp \
+	DVDSubtitleParserSubrip.cpp \
+	DVDSubtitleParserVplayer.cpp \
+	DVDSubtitleTagMicroDVD.cpp \
+	DVDSubtitleTagSami.cpp \
+	DVDSubtitlesLibass.cpp \
+	DVDSubtitleStream.cpp \
+
+LIB=	DVDSubtitles.a
+
+include @abs_top_srcdir@/Makefile.include
+-include $(patsubst %.cpp,%.P,$(patsubst %.c,%.P,$(SRCS)))
+

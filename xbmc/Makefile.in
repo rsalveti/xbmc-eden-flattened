@@ -1,0 +1,43 @@
+SRCS=Application.cpp \
+     ApplicationMessenger.cpp \
+     Autorun.cpp \
+     AutoSwitch.cpp \
+     BackgroundInfoLoader.cpp \
+     CueDocument.cpp \
+     DynamicDll.cpp \
+     Favourites.cpp \
+     FileItem.cpp \
+     LangInfo.cpp \
+     GUIInfoManager.cpp \
+     GUILargeTextureManager.cpp \
+     GUIPassword.cpp \
+     GUIViewControl.cpp \
+     GUIViewState.cpp \
+     MediaSource.cpp \
+     NfoFile.cpp \
+     PasswordManager.cpp \
+     PlayListPlayer.cpp \
+     PartyModeManager.cpp \
+     SectionLoader.cpp \
+     SortFileItem.cpp \
+     SystemGlobals.cpp \
+     Temperature.cpp \
+     TextureCache.cpp \
+     TextureDatabase.cpp \
+     ThumbLoader.cpp \
+     ThumbnailCache.cpp \
+     URL.cpp \
+     Util.cpp \
+     ViewDatabase.cpp \
+     XBApplicationEx.cpp \
+     XBDateTime.cpp \
+     xbmc.cpp \
+
+LIB=xbmc.a
+
+DISTCLEAN_FILES=DllPaths_generated.h
+
+include @abs_top_srcdir@/Makefile.include
+-include $(patsubst %.cpp,%.P,$(patsubst %.c,%.P,$(SRCS)))
+
+

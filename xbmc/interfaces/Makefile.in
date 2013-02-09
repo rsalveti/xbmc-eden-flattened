@@ -1,0 +1,9 @@
+ARCH=@ARCH@
+
+SRCS = AnnouncementManager.cpp \
+       Builtins.cpp \
+
+LIB=interfaces.a
+
+include @abs_top_srcdir@/Makefile.include
+-include $(patsubst %.cpp,%.P,$(patsubst %.c,%.P,$(SRCS)))

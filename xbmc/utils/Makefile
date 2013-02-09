@@ -1,0 +1,65 @@
+SRCS=AlarmClock.cpp \
+     AliasShortcutUtils.cpp \
+     Archive.cpp \
+     AsyncFileCopy.cpp \
+     AutoPtrHandle.cpp \
+     BitstreamStats.cpp \
+     CharsetConverter.cpp \
+     CPUInfo.cpp \
+     Crc32.cpp \
+     CryptThreading.cpp \
+     DownloadQueue.cpp \
+     DownloadQueueManager.cpp \
+     Fanart.cpp \
+     fastmemcpy.c \
+     fastmemcpy-arm.S \
+     FileOperationJob.cpp \
+     FileUtils.cpp \
+     fstrcmp.c \
+     fft.cpp \
+     GLUtils.cpp \
+     HTMLTable.cpp \
+     HTMLUtil.cpp \
+     HttpHeader.cpp \
+     HttpParser.cpp \
+     InfoLoader.cpp \
+     JobManager.cpp \
+     JSONVariantParser.cpp \
+     JSONVariantWriter.cpp \
+     LabelFormatter.cpp \
+     LangCodeExpander.cpp \
+     LCD.cpp \
+     LCDFactory.cpp \
+     log.cpp \
+     md5.cpp \
+     PCMAmplifier.cpp \
+     PCMRemap.cpp \
+     PerformanceSample.cpp \
+     PerformanceStats.cpp \
+     RecentlyAddedJob.cpp \
+     RegExp.cpp \
+     RingBuffer.cpp \
+     RssReader.cpp \
+     ScraperParser.cpp \
+     ScraperUrl.cpp \
+     Splash.cpp \
+     ssrc.cpp \
+     Stopwatch.cpp \
+     StreamDetails.cpp \
+     StreamUtils.cpp \
+     StringUtils.cpp \
+     SystemInfo.cpp \
+     TimeSmoother.cpp \
+     TimeUtils.cpp \
+     TuxBoxUtil.cpp \
+     URIUtils.cpp \
+     Variant.cpp \
+     Weather.cpp \
+     Win32Exception.cpp \
+     XBMCTinyXML.cpp \
+     XMLUtils.cpp \
+
+LIB=utils.a
+
+include ../../Makefile.include
+-include $(patsubst %.cpp,%.P,$(patsubst %.c,%.P,$(patsubst %.S,,$(SRCS))))

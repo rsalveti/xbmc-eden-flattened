@@ -1,0 +1,26 @@
+ARCH=@ARCH@
+
+CXXFLAGS+=-fPIC
+
+SRCS=ConvUtils.cpp \
+     DBusUtil.cpp \
+     DBusMessage.cpp \
+     DBusReserve.cpp \
+     HALManager.cpp \
+     LinuxResourceCounter.cpp \
+     LinuxTimezone.cpp \
+     PosixMountProvider.cpp \
+     XEventUtils.cpp \
+     XFileUtils.cpp \
+     XHandle.cpp \
+     XLCDproc.cpp \
+     XMemUtils.cpp \
+     XSyncUtils.cpp \
+     XTimeUtils.cpp \
+     XThreadUtils.cpp \
+
+LIB=linux.a
+
+include @abs_top_srcdir@/Makefile.include
+
+-include $(patsubst %.cpp,%.P,$(patsubst %.c,%.P,$(SRCS)))
